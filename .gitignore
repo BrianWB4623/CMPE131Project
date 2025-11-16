@@ -1,0 +1,17 @@
+# Byte-compiled / cache files
+__pycache__/
+*.pyc
+
+# Virtual environments
+.venv/
+venv/
+
+# Local SQLite database
+*.sqlite3
+
+# Flask instance folder (local config or db)
+instance/
+
+# Environment variables (secrets)
+.env
+kee
