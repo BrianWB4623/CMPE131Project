@@ -12,3 +12,19 @@ Milestone 1 — non-functional Flask-based LMS prototype.
    python -m venv venv
    .\venv\Scripts\Activate
    ```
+
+2. Install all the requirements from requirements.txt
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   pip install -r requirements.txt
+   ```
+
+3. Run the app
+
+   **Windows (PowerShell):**
+
+   ```powershell
+   python run.py
+   ```

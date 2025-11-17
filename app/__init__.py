@@ -13,13 +13,17 @@ def create_app():
     db.init_app(app)
     login_manager.init_app(app)
     login_manager.login_view="auth.login"
+    from . import models
     #blue prints of rpages
     from app.auth import auth_bp
     from app.main import main_bp
     app.register_blueprint(auth_bp)
     app.register_blueprint(main_bp)
 
+
     with app.app_context():
         db.create_all()
+    
+    print(app.url_map)
     return app
 
