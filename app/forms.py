@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, BooleanField, SubmitField,TextAreaField
+from wtforms import StringField, PasswordField, BooleanField, SubmitField,TextAreaField,SelectField
 from wtforms.validators import DataRequired,Optional
 
 class LoginForm(FlaskForm):
@@ -11,12 +11,17 @@ class LoginForm(FlaskForm):
 class RegistrationForm(FlaskForm):
     username=StringField('Username',validators=[DataRequired()])
     password=PasswordField('Password',validators=[DataRequired()])
-    role=StringField('Role',validators=[Optional()])
+    role=SelectField('Role',choices=[("student","Student"),("teacher","Teacher"),("ta","TA")],validators=[Optional()])
     submit=SubmitField('Register User')
 class AssignmentForm(FlaskForm):
     name=StringField('Assignment Name',validators=[DataRequired()])
     description=TextAreaField('Assignment Description',validators=[Optional()])
     submit=SubmitField('Publish Assignment')
+class MaterialForm(FlaskForm):
+    name = StringField("Material Name", validators=[DataRequired()])
+    description = TextAreaField("Description", validators=[Optional()])
+    submit = SubmitField("Upload Material")
+
 
 
 
