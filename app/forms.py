@@ -14,12 +14,12 @@ class RegistrationForm(FlaskForm):
     role=SelectField('Role',choices=[("student","Student"),("teacher","Teacher"),("ta","TA")],validators=[Optional()])
     submit=SubmitField('Register User')
 class AssignmentForm(FlaskForm):
-    name=StringField('Assignment Name',validators=[DataRequired()])
-    description=TextAreaField('Assignment Description',validators=[Optional()])
+    title=StringField('Assignment Title',validators=[DataRequired()])
+    description=TextAreaField('Assignment Description',validators=[DataRequired()])
     submit=SubmitField('Publish Assignment')
 class MaterialForm(FlaskForm):
-    name = StringField("Material Name", validators=[DataRequired()])
-    description = TextAreaField("Description", validators=[Optional()])
+    title = StringField("Material Title", validators=[DataRequired()])
+    description = TextAreaField("Description", validators=[DataRequired()])
     submit = SubmitField("Upload Material")
 
 

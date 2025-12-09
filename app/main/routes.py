@@ -68,7 +68,7 @@ def delete_assignment(id):
     db.session.commit()
     flash(f"Assignment '{title}' deleted successfully!", "success")
     return redirect(url_for("main.list_assignments"))
-@main_bp.route("/assignments/<int:id>/edit", methods=["POST"])
+@main_bp.route("/assignments/<int:id>/edit", methods=["GET","POST"])
 @login_required
 def edit_assignment(id):
     assignment=Assignment.query.get_or_404(id)
