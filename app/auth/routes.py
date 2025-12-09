@@ -48,8 +48,12 @@ def register():
             flash("Username taken, choose another")
             return render_template("auth/register.html", form=form)
         # create the user
-        # NOTE: User model now requires email, we will plug in a real form field later.
-        user = User(username=form.username.data, email="placeholder@example.com")
+        fake_email = f"{form.username.data}@example.com"
+        user = User(
+            username=form.username.data,
+            email=fake_email,
+            )
+        user.set_password(form.password.data)
         # make the password
         user.set_password(form.password.data)
         # to the database

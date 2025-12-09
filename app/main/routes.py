@@ -3,6 +3,8 @@ from . import main_bp
 from app import db
 from app.models import Assignment, CourseMaterial
 from flask_login import login_required, current_user
+from app.forms import AssignmentForm, MaterialForm
+
 
 @main_bp.route("/")
 def index():
@@ -66,6 +68,23 @@ def delete_assignment(id):
     db.session.commit()
     flash(f"Assignment '{title}' deleted successfully!", "success")
     return redirect(url_for("main.list_assignments"))
+@main_bp.route("/assignments/<int:id>/edit", methods=["POST"])
+@login_required
+def edit_assignment(id):
+    assignment=Assignment.query.get_or_404(id)
+    if assignment.instructor_id != current_user.id:
+        flash("You dont have permission to edit this assignment")
+        return redirect(url_for("main.list_assignments"))
+    form = AssignmentForm(obj=assignment)
+    if form.validate_on_submit():
+        assignment.title=form.title.data
+        assignment.description=form.description.data
+        db.session.commit()
+        flash(f"Assignment '{assignment.title}' updated successfully!")
+        return redirect(url_for("main.assignment_detail", id=assignment.id))
+    return render_template("main/edit_assignment.html", form=form, assignment=assignment)
+
+
 
 # ========== COURSE MATERIALS ROUTES ==========
 
@@ -121,3 +140,20 @@ def delete_material(id):
     db.session.commit()
     flash(f"Material '{title}' deleted successfully!", "success")
     return redirect(url_for("main.list_materials"))
+
+@main_bp.route("/materials/<int:id>/edit",methods=["GET","POST"])
+@login_required
+def edit_material(id):
+    material=CourseMaterial.query.get_or_404(id)
+    if material.instructor_id != current_user.id:
+        flash("You dont have permission to edit this material")
+        return redirect(url_for("main.list_materials"))
+    form = MaterialForm(obj=material)
+    if form.validate_on_submit():
+        material.title=form.title.data
+        material.description=form.description.data
+        db.session.commit()
+        flash(f"Material '{material.title}' updated successfully!")
+        return redirect(url_for("main.material_detail", id=material.id))
+    return render_template("main/edit_material.html", form=form, material=material)
+
