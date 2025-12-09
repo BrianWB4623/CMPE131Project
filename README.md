@@ -1,6 +1,7 @@
 # OpenCourse
 
-Milestone 1 — non-functional Flask-based LMS prototype.
+OpenCourse is a lightweight course management web app built with Flask.  
+It supports user authentication, assignments, course materials, and basic role-based behavior for instructors and students.
 
 ## Installation
 
@@ -31,14 +32,16 @@ Milestone 1 — non-functional Flask-based LMS prototype.
 
 ## Screenshots
 
-1. Index page
-<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/6339aeba-71e7-4449-9357-69aaba61589a" />
+1. Home Page
+   <img width="1919" height="863" alt="image" src="Homepage.png" />
 
-2. Feature page
-<img width="1919" height="860" alt="image" src="https://github.com/user-attachments/assets/79bbd0d3-93d3-4785-944f-ba92b60191c3" />
+2. Assignments Page
+   <img width="1919" height="860" alt="image" src="https://github.com/BrianWB4623/CMPE131Project/pull/5/files#diff-bfb774519cf24e513d187c41524b77060a2ed03c90e5ebd02e66193028736dfd" />
 
-3. Login page
-<img width="1919" height="863" alt="image" src="https://github.com/user-attachments/assets/9b214d75-cbdd-483a-92e9-5ae9bd3e20ac" />
+3. Course Materials Page
+   <img width="1919" height="863" alt="image" src="https://github.com/BrianWB4623/CMPE131Project/pull/5/files#diff-a3de5b2e43ec178ce7812d37f5bcccd3d4d066cb728e4294c319b4c488d0a437" />
 
-
-
+4.Registration Page
+<img width="1919" height="863" alt="image" src="https://github.com/BrianWB4623/CMPE131Project/pull/5/files#diff-44a8c6591678abcd7a33cc9c5a978be896ff18210c183deac7a333476abe3f8f" />
+5.Login Page
+<img width="1919" height="863" alt="image" src="https://github.com/BrianWB4623/CMPE131Project/pull/5/files#diff-a3de5b2e43ec178ce7812d37f5bcccd3d4d066cb728e4294c319b4c488d0a437" />
