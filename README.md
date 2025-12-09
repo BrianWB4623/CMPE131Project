@@ -1,7 +1,6 @@
 # OpenCourse
 
-OpenCourse is a lightweight course management web app built with Flask.  
-It supports user authentication, assignments, course materials, and basic role-based behavior for instructors and students.
+Milestone 1 — non-functional Flask-based LMS prototype.
 
 ## Installation
 
