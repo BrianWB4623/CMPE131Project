@@ -57,3 +57,10 @@ footer {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+.btn-primary {
+  background-color: blueviolet !important;
+  border-color: blueviolet !important;
+}
+.btn-primary:hover {
+  background-color: #9a4de6 !important;
+}
