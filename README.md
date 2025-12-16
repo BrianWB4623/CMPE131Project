@@ -63,13 +63,13 @@ pytest
 ## Team Roles
 
 Person 1 (Rachel) – Backend Models, Database, Create/Delete Routes
-Build SQLAlchemy models, Configure and initialize the database, implement main entity CRUD routes.
+Build SQLAlchemy models, Configure and initialize the database, and implement main entity CRUD routes.
 
 Person 2 (Brian) – Authentication, WTForms, Edit/Update Routes
-Create authentication and main entity forms, Implement Flask-Login authentication, Implement edit/update routes for assignments and materials
+Create authentication and main entity forms, Implement Flask-Login authentication, and implement edit/update routes for assignments and materials
 
 Person 3 (Sohum) – Unit Testing, Documentation (PDF), README, Tagging
-Create tests/ folder structure, Write unite, regression, and implementation tests, create documentation, complete the full README, tag github, final verification for the app to be functional
+Create tests/ folder structure, Write unit, regression, and implementation tests, create documentation, complete the full README, tag github, final verification for the app to be functional
 
 ```
 
