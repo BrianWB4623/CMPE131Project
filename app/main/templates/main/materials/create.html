@@ -17,26 +17,11 @@
   </nav>
   <div class="row justify-content-center">
     <div class="col-md-6">
+      {{#Material creation form#}}
       <h1>Create Course Material</h1>
-
-      {% with messages = get_flashed_messages(with_categories=true) %} {% if
-      messages %} {% for category, message in messages %}
-      <div
-        class="alert alert-{% if category == 'error' %}danger{% else %}success{% endif %} alert-dismissible fade show"
-        role="alert"
-      >
-        {{ message }}
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="alert"
-          aria-label="Close"
-        ></button>
-      </div>
-      {% endfor %} {% endif %} {% endwith %}
-
       <form method="POST" action="{{ url_for('main.create_material') }}">
         <div class="mb-3">
+          {{#Title#}}
           <label for="title" class="form-label">Title</label>
           <input
             type="text"
@@ -47,6 +32,7 @@
             placeholder="Enter material title"
           />
         </div>
+        {{#Course selection#}}
         <div class="mb-3">
           <label for="course_id" class="form-label">Course (optional)</label>
           <select id="course_id" name="course_id" class="form-select">
@@ -56,7 +42,7 @@
             {% endfor %}
           </select>
         </div>
-
+        {{#Description#}}
         <div class="mb-3">
           <label for="description" class="form-label"
             >Content/Description</label
@@ -70,7 +56,7 @@
             placeholder="Enter material content or description"
           ></textarea>
         </div>
-
+        {{#Submit#}}
         <div class="d-flex gap-2">
           <button type="submit" class="btn btn-primary">Create Material</button>
           <a
