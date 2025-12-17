@@ -71,6 +71,47 @@ Create authentication and main entity forms, Implement Flask-Login authenticatio
 Person 3 (Sohum) – Unit Testing, Documentation (PDF), README, Tagging
 Create tests/ folder structure, Write unit, regression, and implementation tests, create documentation, complete the full README, tag github, final verification for the app to be functional
 
+Milestone 3 - Final Release
+Home Page Logged In 
+<img width="2861" height="1619" alt="image" src="https://github.com/user-attachments/assets/b21322ff-9cfd-4a26-90a8-5b747a9fa4a2" />
+
+Home Page Logged Out
+<img width="2875" height="1590" alt="image" src="https://github.com/user-attachments/assets/29f8991e-b202-4af6-81de-d372e0308661" />
+
+Assignments List
+<img width="2861" height="1579" alt="image" src="https://github.com/user-attachments/assets/d92939f9-9acd-4f32-b96b-0b90e50f9853" />
+
+Assignment Creation
+<img width="2836" height="1583" alt="image" src="https://github.com/user-attachments/assets/1acb98ca-1861-4534-a21b-97f469985e90" />
+
+Testing Results
+<img width="2840" height="1173" alt="image" src="https://github.com/user-attachments/assets/d2c9059a-bb58-4fed-be20-4c9cb0f6631d" />
+
+
+Test Report
+
+Model Tests
+  - These were for User, Assignment, CourseMaterial creation
+  - Relationship tests (between instructor and materials)
+
+Form Tests
+  - LoginForm validation for:
+  - Valid credentials
+  - Missing Fields
+  - Incorrect Data
+
+Route Tests
+  - Public list routes return HTTP 200
+  - Protected routes redirect when the user is unauthenticated
+  - Instructor-only access is verified
+
+Integration Tests
+  - Login is successful
+  - Login fails
+  - Assignment creation and deletion
+  - Material Creation
+  - An unauthorized user is attempting to access routes that are protected.
+
 ```
 
 ```
