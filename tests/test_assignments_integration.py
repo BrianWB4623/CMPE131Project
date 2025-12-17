@@ -32,7 +32,7 @@ def test_assignment_delete_authorized(client, instructor_user, app):
     login(client, instructor_user.username, "testpassword")
 
     with app.app_context():
-        hw = Assignment(title="Delete Me", instructor_id=instructor_user.id)
+        hw = Assignment(title="Delete Me", description="Temporary assignment delete test", instructor_id=instructor_user.id)
         db.session.add(hw)
         db.session.commit()
         hw_id = hw.id

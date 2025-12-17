@@ -26,7 +26,8 @@ def test_material_create_unauthorized(client):
     )
     assert response.status_code in (302, 401)
 
-def test_material_list_loads(client):
+def test_material_list_loads(client, instructor_user):
+    login(client, instructor_user.username, "testpassword")
     response = client.get("/materials")
     assert response.status_code == 200
     assert b"Materials" in response.data
